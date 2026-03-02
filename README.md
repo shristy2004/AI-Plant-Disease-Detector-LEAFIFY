@@ -1,4 +1,4 @@
-# leafify
+#LEAFIFY
 🌿 AI Plant Disease Detection – LEAFIFY
 
 An AI-powered web application that detects plant diseases from leaf images using Deep Learning (CNN) and provides instant analysis through a modern web interface.
