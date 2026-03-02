@@ -1,144 +1,102 @@
-#LEAFIFY
-🌿 AI Plant Disease Detection – LEAFIFY
+🌿 LEAFIFY
+AI-Powered Plant Disease Detection System
 
-An AI-powered web application that detects plant diseases from leaf images using Deep Learning (CNN) and provides instant analysis through a modern web interface.
+An intelligent web application that detects plant diseases from leaf images using Deep Learning (CNN) and provides instant analysis through a modern, responsive interface.
 
 🚀 Project Overview
 
-LEAFIFY is an intelligent plant disease detection system that allows users to:
+LEAFIFY is an AI-based plant disease detection system that enables users to:
 
-📸 Upload a leaf image
+📸 Upload a plant leaf image
 
 🧠 Analyze the image using a trained CNN model
 
 🌱 Detect plant disease with prediction confidence
 
-📊 Visualize model performance
+📊 Visualize model training performance
 
-This project combines Deep Learning, Computer Vision, and Full-Stack Web Development to deliver a real-world agricultural solution.
 
-🛠️ Tech Stack
+This project integrates Deep Learning, Computer Vision, and Full-Stack Web Development to create a practical agricultural solution.
+🛠️ Technology Stack
 🔧 Build Tool
-
-Vite
+    Vite
 
 🖥️ Frontend
 React.js
-
 Tailwind CSS
 
 ⚙️ Backend
-
 FastAPI
 
 🧠 Deep Learning
-
 PyTorch
-
 Convolutional Neural Networks (CNN)
 
 🖼️ Image & Data Processing
-
 OpenCV
-
 Pillow
-
 NumPy
-
 Pandas
 
 📊 Visualization
-
 Matplotlib
-
 Seaborn
 
 📦 API Handling
-
-🏗️ System Architecture
-User → React Frontend → FastAPI Backend → PyTorch CNN Model → Prediction → Response → UI Display
-
-📂 Project Structure
-AI-Plant-Disease-Detector-LEAFIFY/
-│
-├── backend/
-│   ├── main.py
-│   ├── requirements.txt
-│   └── model/
-│
-├── leafify-frontend/
-│   ├── src/
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-│
-├── leafify_ml_part/
-│   └── training & model files
-│
-└── README.md
-
-
+Multipart (File upload handling for APIs)
 
 🧠 How It Works
 
-User uploads a plant leaf image.
+User uploads a plant leaf image through the web interface.
 
 Image is processed using OpenCV & Pillow.
 
-Image is converted to tensor using NumPy.
+Image data is converted into tensors using NumPy.
 
-CNN model (trained in PyTorch) predicts disease class.
+A trained CNN model (PyTorch) predicts the disease class.
 
-FastAPI returns prediction result.
+FastAPI returns the prediction response.
 
-React displays result beautifully.
+React frontend displays the result with confidence score.
 
-📸 Key Features
+✨ Key Features
 
 ✅ Real-time image upload
 
-✅ Deep learning prediction
+✅ AI-based disease prediction
 
-✅ Clean modern UI
+✅ Clean & responsive UI
 
 ✅ REST API integration
 
-✅ Performance visualization
+✅ Model performance visualization
 
-✅ Modular project structure
-
-✅ Scalable architecture
-
-⚡ Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/AI-Plant-Disease-Detector-LEAFIFY.git
-cd AI-Plant-Disease-Detector-LEAFIFY
+✅ Modular and scalable architecture
 
 🌍 Real-World Impact
 
-🌾 Helps farmers detect disease early
+🌾 Early detection of plant diseases
 
-💰 Reduces crop loss
+💰 Reduction in crop loss
 
-📈 Improves agricultural productivity
+📈 Increased agricultural productivity
 
-🤖 Demonstrates practical AI application
+🤖 Practical implementation of AI in farming
 
 🔮 Future Improvements
 
-Add mobile camera integration
+📱 Mobile camera integration
 
-Deploy on cloud (AWS / Render / Vercel)
+☁️ Cloud deployment (AWS / Render / Vercel)
 
-Add multi-language support
+🌐 Multi-language support
 
-Improve model accuracy with larger dataset
+📊 Improved model accuracy with larger dataset
 
-Add fertilizer recommendation system
+🌱 Fertilizer & treatment recommendation system
 
 ⭐ Support
-
-If you found this project helpful:
-
-Give it a ⭐ on GitHub
-Share it with others
+--If you found this project helpful:
+--Give it a ⭐ on GitHub
+--Share it with others
+--Contribute to enhance the project
