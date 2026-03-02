@@ -118,7 +118,7 @@ AI-Plant-Disease-Detector-LEAFIFY/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/[your-username](https://github.com/shristy2004)/AI-Plant-Disease-Detector-LEAFIFY.git
+git clone https://github.com/shristy2004/AI-Plant-Disease-Detector-LEAFIFY.git
 cd AI-Plant-Disease-Detector-LEAFIFY
 ```
 
