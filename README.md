@@ -1,102 +1,182 @@
-🌿 LEAFIFY
-AI-Powered Plant Disease Detection System
+# 🌿 LEAFIFY  
+## AI-Powered Plant Disease Detection System
 
-An intelligent web application that detects plant diseases from leaf images using Deep Learning (CNN) and provides instant analysis through a modern, responsive interface.
+An intelligent web application that detects plant diseases from leaf images using **Deep Learning (CNN)** and provides instant analysis through a modern, responsive interface.
 
-🚀 Project Overview
+---
 
-LEAFIFY is an AI-based plant disease detection system that enables users to:
+## 🚀 Project Overview
 
-📸 Upload a plant leaf image
+**LEAFIFY** is an AI-based plant disease detection system that enables users to:
 
-🧠 Analyze the image using a trained CNN model
+- 📸 Upload a plant leaf image  
+- 🧠 Analyze the image using a trained CNN model  
+- 🌱 Detect plant disease with prediction confidence  
+- 📊 Visualize model training performance  
 
-🌱 Detect plant disease with prediction confidence
+This project integrates **Deep Learning, Computer Vision, and Full-Stack Web Development** to create a practical agricultural solution.
 
-📊 Visualize model training performance
+---
 
+## 🛠️ Technology Stack
 
-This project integrates Deep Learning, Computer Vision, and Full-Stack Web Development to create a practical agricultural solution.
-🛠️ Technology Stack
-🔧 Build Tool
-    Vite
+### 🔧 Build Tool
+- Vite
 
-🖥️ Frontend
-React.js
-Tailwind CSS
+### 🖥️ Frontend
+- React.js  
+- Tailwind CSS  
 
-⚙️ Backend
-FastAPI
+### ⚙️ Backend
+- FastAPI  
 
-🧠 Deep Learning
-PyTorch
-Convolutional Neural Networks (CNN)
+### 🧠 Deep Learning
+- PyTorch  
+- Convolutional Neural Networks (CNN)  
 
-🖼️ Image & Data Processing
-OpenCV
-Pillow
-NumPy
-Pandas
+### 🖼️ Image & Data Processing
+- OpenCV  
+- Pillow  
+- NumPy  
+- Pandas  
 
-📊 Visualization
-Matplotlib
-Seaborn
+### 📊 Visualization
+- Matplotlib  
+- Seaborn  
 
-📦 API Handling
-Multipart (File upload handling for APIs)
+### 📦 API Handling
+- Multipart (File upload handling for APIs)
 
-🧠 How It Works
+---
 
-User uploads a plant leaf image through the web interface.
+## 🏗️ System Architecture
 
-Image is processed using OpenCV & Pillow.
+```
+User 
+   ↓
+React Frontend 
+   ↓
+FastAPI Backend 
+   ↓
+PyTorch CNN Model 
+   ↓
+Prediction Result 
+   ↓
+Frontend Display
+```
 
-Image data is converted into tensors using NumPy.
+---
 
-A trained CNN model (PyTorch) predicts the disease class.
+## 📂 Project Structure
 
-FastAPI returns the prediction response.
+```
+AI-Plant-Disease-Detector-LEAFIFY/
+│
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   └── model/
+│
+├── leafify-frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+├── leafify_ml_part/
+│   └── training & model files
+│
+└── README.md
+```
 
-React frontend displays the result with confidence score.
+---
 
-✨ Key Features
+## 🧠 How It Works
 
-✅ Real-time image upload
+1. User uploads a plant leaf image through the web interface.  
+2. Image is processed using **OpenCV & Pillow**.  
+3. Image data is converted into tensors using **NumPy**.  
+4. A trained **CNN model (PyTorch)** predicts the disease class.  
+5. FastAPI returns the prediction response.  
+6. React frontend displays the result with confidence score.
 
-✅ AI-based disease prediction
+---
 
-✅ Clean & responsive UI
+## ✨ Key Features
 
-✅ REST API integration
+- ✅ Real-time image upload  
+- ✅ AI-based disease prediction  
+- ✅ Clean & responsive UI  
+- ✅ REST API integration  
+- ✅ Model performance visualization  
+- ✅ Modular and scalable architecture  
 
-✅ Model performance visualization
+---
 
-✅ Modular and scalable architecture
+## ⚡ Installation & Setup
 
-🌍 Real-World Impact
+### 1️⃣ Clone the Repository
 
-🌾 Early detection of plant diseases
+```bash
+git clone https://github.com/[your-username](https://github.com/shristy2004)/AI-Plant-Disease-Detector-LEAFIFY.git
+cd AI-Plant-Disease-Detector-LEAFIFY
+```
 
-💰 Reduction in crop loss
+---
 
-📈 Increased agricultural productivity
+### 2️⃣ Backend Setup
 
-🤖 Practical implementation of AI in farming
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-🔮 Future Improvements
+Backend runs at:
+```
+http://127.0.0.1:8000
+```
 
-📱 Mobile camera integration
+---
 
-☁️ Cloud deployment (AWS / Render / Vercel)
+### 3️⃣ Frontend Setup
 
-🌐 Multi-language support
+```bash
+cd leafify-frontend
+npm install
+npm run dev
+```
 
-📊 Improved model accuracy with larger dataset
+Frontend runs at:
+```
+http://localhost:5173
+```
 
-🌱 Fertilizer & treatment recommendation system
+---
 
-⭐ Support
---If you found this project helpful:
---Give it a ⭐ on GitHub
---Share it with others
---Contribute to enhance the project
+## 🌍 Real-World Impact
+
+- 🌾 Early detection of plant diseases  
+- 💰 Reduction in crop loss  
+- 📈 Increased agricultural productivity  
+- 🤖 Practical implementation of AI in farming  
+
+---
+
+## 🔮 Future Improvements
+
+- 📱 Mobile camera integration  
+- ☁️ Cloud deployment (AWS / Render / Vercel)  
+- 🌐 Multi-language support  
+- 📊 Improved model accuracy with larger dataset  
+- 🌱 Fertilizer & treatment recommendation system  
+
+---
+
+## ⭐ Support
+
+If you found this project helpful:
+
+- Give it a ⭐ on GitHub  
+- Share it with others  
+- Contribute to enhance the project  
