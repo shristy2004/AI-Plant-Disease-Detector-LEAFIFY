@@ -227,15 +227,6 @@ Hosted on **Render**
 
 ---
 
-## 👨‍💻 Author
-
-**Shristy**
-
-GitHub:
-https://github.com/shristy2004
-
----
-
 ## ⭐ Support
 
 If you found this project helpful:
