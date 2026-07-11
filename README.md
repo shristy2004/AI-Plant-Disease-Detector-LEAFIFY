@@ -77,7 +77,7 @@ AI-Plant-Disease-Detector-LEAFIFY/
 │   ├── requirements.txt
 │   └── model/
 │
-├── leafify-frontend/
+├── frontend/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
