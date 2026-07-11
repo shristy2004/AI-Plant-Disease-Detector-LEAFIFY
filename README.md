@@ -1,7 +1,14 @@
-# 🌿 LEAFIFY  
+ # 🌿 LEAFIFY  
 ## AI-Powered Plant Disease Detection System
 
 An intelligent web application that detects plant diseases from leaf images using **Deep Learning (CNN)** and provides instant analysis through a modern, responsive interface.
+
+---
+
+## 🚀 Live Demo
+
+🌐 **Try LEAFIFY Live:**  
+**https://ai-plant-disease-detector-leafify.vercel.app**
 
 ---
 
@@ -9,14 +16,10 @@ An intelligent web application that detects plant diseases from leaf images usin
 
 **LEAFIFY** is an AI-based plant disease detection system that enables users to:
 
-- 📸 Upload a plant leaf image  
-- 🧠 Analyze the image using a trained CNN model  
-- 🌱 Detect plant disease with prediction confidence  
-- 📊 Visualize model training performance  
-
-This project integrates **Deep Learning, Computer Vision, and Full-Stack Web Development** to create a practical agricultural solution.
-
----
+- 📸 Upload a plant leaf image
+- 🧠 Analyze the image using a trained CNN model
+- 🌱 Detect plant disease with prediction confidence
+- 📊 Visualize model training performance
 
 ## 🛠️ Technology Stack
 
@@ -24,44 +27,57 @@ This project integrates **Deep Learning, Computer Vision, and Full-Stack Web Dev
 - Vite
 
 ### 🖥️ Frontend
-- React.js  
-- Tailwind CSS  
+- React.js
+- Tailwind CSS
+- React Router
 
 ### ⚙️ Backend
-- FastAPI  
+- FastAPI
+- Uvicorn
 
 ### 🧠 Deep Learning
-- PyTorch  
-- Convolutional Neural Networks (CNN)  
+- PyTorch
+- Convolutional Neural Networks (CNN)
 
-### 🖼️ Image & Data Processing
-- OpenCV  
-- Pillow  
-- NumPy  
-- Pandas  
+### 🖼️ Image Processing
+- OpenCV
+- Pillow
 
-### 📊 Visualization
-- Matplotlib  
-- Seaborn  
+### 📊 Data Processing
+- NumPy
+- Pandas
+
+### 📈 Visualization
+- Matplotlib
+- Seaborn
 
 ### 📦 API Handling
-- Multipart (File upload handling for APIs)
+- Multipart File Upload
+- REST API
 
 ---
 
 ## 🏗️ System Architecture
 
-```
-User 
-   ↓
-React Frontend 
-   ↓
-FastAPI Backend 
-   ↓
-PyTorch CNN Model 
-   ↓
-Prediction Result 
-   ↓
+```text
+User
+   │
+   ▼
+React Frontend
+   │
+   ▼
+FastAPI Backend
+   │
+   ▼
+PyTorch CNN Model
+   │
+   ▼
+Prediction Result
+   │
+   ▼
+Treatment Recommendation
+   │
+   ▼
 Frontend Display
 ```
 
@@ -69,22 +85,26 @@ Frontend Display
 
 ## 📂 Project Structure
 
-```
+```text
 AI-Plant-Disease-Detector-LEAFIFY/
 │
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
-│   └── model/
+│   ├── model/
+│   └── ...
 │
 ├── frontend/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
-│   └── vite.config.js
+│   ├── vite.config.js
+│   └── .env
 │
 ├── leafify_ml_part/
-│   └── training & model files
+│   ├── model training
+│   ├── dataset
+│   └── learning_curves.png
 │
 └── README.md
 ```
@@ -93,29 +113,36 @@ AI-Plant-Disease-Detector-LEAFIFY/
 
 ## 🧠 How It Works
 
-1. User uploads a plant leaf image through the web interface.  
-2. Image is processed using **OpenCV & Pillow**.  
-3. Image data is converted into tensors using **NumPy**.  
-4. A trained **CNN model (PyTorch)** predicts the disease class.  
-5. FastAPI returns the prediction response.  
-6. React frontend displays the result with confidence score.
+1. User uploads a plant leaf image.
+2. React frontend sends the image to the FastAPI backend.
+3. FastAPI preprocesses the image using OpenCV and Pillow.
+4. Image is converted into tensors using NumPy.
+5. The trained PyTorch CNN predicts the disease class.
+6. Backend returns:
+   - Disease Prediction
+   - Confidence Score
+   - Recommended Treatment
+7. React displays the result beautifully to the user.
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-- ✅ Real-time image upload  
-- ✅ AI-based disease prediction  
-- ✅ Clean & responsive UI  
-- ✅ REST API integration  
-- ✅ Model performance visualization  
-- ✅ Modular and scalable architecture  
+- ✅ AI-powered disease prediction
+- ✅ Upload plant leaf images
+- ✅ Confidence score visualization
+- ✅ Recommended treatment suggestions
+- ✅ Responsive modern UI
+- ✅ REST API integration
+- ✅ Fast inference using PyTorch
+- ✅ FastAPI Swagger Documentation
+- ✅ Fully deployed using Render + Vercel
 
 ---
 
 ## ⚡ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/shristy2004/AI-Plant-Disease-Detector-LEAFIFY.git
@@ -124,52 +151,88 @@ cd AI-Plant-Disease-Detector-LEAFIFY
 
 ---
 
-### 2️⃣ Backend Setup
+### 2. Backend Setup
 
 ```bash
 cd backend
+
 pip install -r requirements.txt
+
 uvicorn main:app --reload
 ```
 
-Backend runs at:
+Backend runs at
+
 ```
 http://127.0.0.1:8000
 ```
 
+Swagger Documentation
+
+```
+http://127.0.0.1:8000/docs
+```
+
 ---
 
-### 3️⃣ Frontend Setup
+### 3. Frontend Setup
 
 ```bash
-cd leafify-frontend
+cd frontend
+
 npm install
+
 npm run dev
 ```
 
-Frontend runs at:
+Frontend runs at
+
 ```
 http://localhost:5173
 ```
 
 ---
 
-## 🌍 Real-World Impact
+## 🌍 Deployment
 
-- 🌾 Early detection of plant diseases  
-- 💰 Reduction in crop loss  
-- 📈 Increased agricultural productivity  
-- 🤖 Practical implementation of AI in farming  
+### Frontend
+
+Hosted on **Vercel**
+
+### Backend
+
+Hosted on **Render**
+
+---
+
+## 🌾 Real-World Impact
+
+- 🌱 Early plant disease detection
+- 💰 Reduces crop losses
+- 📈 Improves agricultural productivity
+- 🤖 AI-assisted farming
+- 🚜 Helps farmers make faster decisions
 
 ---
 
 ## 🔮 Future Improvements
 
-- 📱 Mobile camera integration  
-- ☁️ Cloud deployment (AWS / Render / Vercel)  
-- 🌐 Multi-language support  
-- 📊 Improved model accuracy with larger dataset  
-- 🌱 Fertilizer & treatment recommendation system  
+- 📱 Mobile camera integration
+- 🌐 Multi-language support
+- 📍 GPS-based disease monitoring
+- 📊 Improved CNN accuracy
+- 🌿 Fertilizer recommendation
+- ☁️ AWS Cloud deployment
+- 📈 Disease severity estimation
+
+---
+
+## 👨‍💻 Author
+
+**Shristy**
+
+GitHub:
+https://github.com/shristy2004
 
 ---
 
@@ -177,6 +240,10 @@ http://localhost:5173
 
 If you found this project helpful:
 
-- Give it a ⭐ on GitHub  
-- Share it with others  
-- Contribute to enhance the project  
+⭐ Star this repository
+
+🍴 Fork the project
+
+🤝 Contribute to improve it
+
+💚 Share it with others
