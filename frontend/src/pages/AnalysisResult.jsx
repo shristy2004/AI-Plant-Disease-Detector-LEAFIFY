@@ -18,26 +18,26 @@ export default function AnalysisResult() {
     const navigate = useNavigate();
 
     // 1. Retrieve Data from Router State
-    const { analysisData, imagePreview } = location.state || {};
+    const { result } = location.state || {};
 
     // 2. Handle Case where user visits page directly without scanning
     useEffect(() => {
-        if (!analysisData) {
+        if (!result) {
             navigate('/scanner');
         }
-    }, [analysisData, navigate]);
+    }, [result, navigate]);
 
-    if (!analysisData) return null;
+    if (!result) return null;
 
     // 3. Extract & Parse Data
-    const label = analysisData.prediction || "Unknown";
-    
+    const label = result.prediction || "Unknown";
+
     // Parse "98.50%" string to number 98.5
-    const confidenceString = analysisData.confidence || "0%";
+    const confidenceString = result.confidence || "0%";
     const confidenceVal = parseFloat(confidenceString.replace('%', ''));
-    
-    const treatments = analysisData.treatment || [];
-    
+
+    const treatments = result.treatment || [];
+
     // Determine Color Scheme based on Confidence
     const status = getConfidenceColor(confidenceVal);
 
@@ -49,7 +49,7 @@ export default function AnalysisResult() {
     return (
         <div className="min-h-screen w-full bg-gradient-to-br from-lime-50 via-green-100 to-emerald-100 p-4 sm:p-8">
             <div className="max-w-3xl mx-auto flex flex-col space-y-6">
-                
+
                 {/* Header and Back Button */}
                 <header className="flex items-center justify-between mb-4">
                     <button
@@ -67,17 +67,6 @@ export default function AnalysisResult() {
 
                 {/* Main Diagnosis Card */}
                 <div className={`bg-white rounded-3xl p-6 shadow-2xl border-t-8 ${borderColor}`}>
-                    
-                    {/* Image Preview */}
-                    {imagePreview && (
-                        <div className="mb-6 flex justify-center">
-                            <img 
-                                src={imagePreview} 
-                                alt="Scanned Leaf" 
-                                className="h-48 w-48 object-cover rounded-xl border-4 border-gray-100 shadow-inner"
-                            />
-                        </div>
-                    )}
 
                     <div className="flex items-center justify-center space-x-3 mb-6 text-center">
                         <Leaf size={32} className={isHealthy ? "text-green-600" : "text-red-500"} />
@@ -98,10 +87,10 @@ export default function AnalysisResult() {
                             </p>
                             <p className="font-bold text-2xl text-slate-900">{confidenceVal.toFixed(1)}%</p>
                         </div>
-                        
+
                         <div className="w-full bg-gray-200 rounded-full h-4 shadow-inner">
-                            <div 
-                                className={`h-4 rounded-full transition-all duration-1000 ease-out ${status.bar}`} 
+                            <div
+                                className={`h-4 rounded-full transition-all duration-1000 ease-out ${status.bar}`}
                                 style={{ width: `${confidenceVal}%` }}
                             ></div>
                         </div>
@@ -116,9 +105,9 @@ export default function AnalysisResult() {
                     <div className="absolute top-0 right-0 p-4 opacity-10">
                         <Shield size={100} className="text-indigo-600" />
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold text-indigo-800 flex items-center gap-3 mb-6 z-10 relative">
-                        <Shield size={28} /> 
+                        <Shield size={28} />
                         {isHealthy ? "Maintenance Tips" : "Recommended Treatments"}
                     </h3>
 
